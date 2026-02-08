@@ -1,0 +1,19 @@
+
+.container {
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.image {
+  width: 100%;
+  min-height: 400px;
+  background-color: var(--color-on-surface-3);
+  opacity: .1;
+  border-radius: var(--border-radius-sm);
+}
+
+.title {
+  font-size: 1em;
+  font-weight: 500;
+  margin-top: 16px;
+}

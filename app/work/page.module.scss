@@ -1,0 +1,27 @@
+@use '../../styles/variables' as *;
+
+$padding: 16px;
+$column-gap: 64px;
+$column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
+
+.page {
+  width: 100%;
+  max-width: 800px;
+  padding: var(--padding-inner-vertical) var(--padding-outer-horizontal);
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: $column-gap;
+}
+
+.title {
+  font-family: var(--font-playfair-display);
+  font-size: 3em;
+  line-height: 1em;
+  color: var(--color-primary);
+  // optical alignment of the edge of the letter & the median
+  transform: translate(-.07em, -0.32em);
+}

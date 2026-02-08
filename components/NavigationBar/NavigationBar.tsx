@@ -1,15 +1,17 @@
-import {PropsWithChildren} from "react";
+"use client";
+import React from "react";
 import styles from "./NavigationBar.module.css";
-import Link from "next/link";
+import Link, {LinkProps} from "next/link";
+import {usePathname} from "next/navigation";
 
 export const NavigationBar = () => {
     return (
         <nav className={styles.nav}>
             <ul className={styles.ul}>
-                <NavigationItem>
+                <NavigationItem href={"/work"}>
                     Projects
                 </NavigationItem>
-                <NavigationItem>
+                <NavigationItem href={"/about"}>
                     About
                 </NavigationItem>
             </ul>
@@ -17,14 +19,21 @@ export const NavigationBar = () => {
     );
 };
 
-export const NavigationItem = (props: PropsWithChildren) => {
-    const {children} = props;
+export const NavigationItem = ({
+    children,
+    href,
+} : {
+    children: React.ReactNode;
+    href: LinkProps["href"];
+}) => {
+    const pathname = usePathname();
+    const isActive = href === pathname;
 
     return (
         <li className={styles.li}>
             <Link
-                className={styles.link}
-                href={"/"}>
+                className={`${styles.link} ${isActive ? styles.link__active : ""}`}
+                href={href}>
                 {children}
             </Link>
         </li>
