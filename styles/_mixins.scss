@@ -1,0 +1,13 @@
+@use './variables' as *;
+
+@mixin breakpoint-min($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin fixed-section {
+  position: fixed;
+  left: 0;
+  padding: var(--padding-outer-vertical) var(--padding-outer-horizontal);
+}
