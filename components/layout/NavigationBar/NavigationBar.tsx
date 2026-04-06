@@ -3,16 +3,19 @@ import React from "react";
 import styles from "./NavigationBar.module.css";
 import Link, {LinkProps} from "next/link";
 import {usePathname} from "next/navigation";
+import {useTranslations} from "next-intl";
 
 export const NavigationBar = () => {
+    const t = useTranslations("Nav");
+
     return (
         <nav className={styles.nav}>
             <ul className={styles.ul}>
                 <NavigationItem href={"/work"}>
-                    Projects
+                    {t("projects")}
                 </NavigationItem>
                 <NavigationItem href={"/about"}>
-                    About
+                    {t("about")}
                 </NavigationItem>
             </ul>
         </nav>

@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Roboto, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import {Header} from "@/components/Header/Header";
-import {Footer} from "@/components/Footer/Footer";
+import {Header} from "@/components/layout/Header/Header";
+import {Footer} from "@/components/layout/Footer/Footer";
 import {Cursor} from "@/components/Cursor/Cursor";
+import {NextIntlClientProvider} from "next-intl";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -29,10 +30,12 @@ export default function RootLayout({
   return (
     <html lang="en" prefix={"og:http//ogp.me/ns#"}>
       <body className={`${roboto.variable} ${playfairDisplay.variable}`}>
-        <Cursor/>
-        <Header/>
-        {children}
-        <Footer/>
+        <NextIntlClientProvider>
+          <Cursor/>
+          <Header/>
+          {children}
+          <Footer/>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

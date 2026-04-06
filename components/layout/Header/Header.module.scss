@@ -1,0 +1,19 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.header {
+  @include fixed-section;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: $breakpoint-md) {
+  .header {
+    font-size: 18px;
+  }
+}
