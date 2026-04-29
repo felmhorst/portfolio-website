@@ -1,10 +1,11 @@
+import React from "react";
 import styles from "./LifeChapter.module.css";
 
-interface LifeChapterProps {
+export interface LifeChapterProps {
     start: string;
     end?: string;
-    title: string;
-    description: string;
+    title: string | React.ReactNode;
+    description: string | React.ReactNode;
 }
 
 export const LifeChapter = (props: LifeChapterProps) => {

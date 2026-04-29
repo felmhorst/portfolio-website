@@ -1,13 +1,13 @@
 {
   "Nav": {
     "projects": "Projekte",
-    "about": "Über"
+    "about": "Über mich"
   },
   "Footer": {
     "name": "Florian Elmhorst"
   },
   "AboutPage": {
     "title": "Interaktions-Designer &<br/>Web Entwickler",
-    "description": "Hey! I'm Florian Elmhorst, an interaction designer and frontend  developer with a passion for creating engaging digital experiences. With an eye for visual design and a good technical understanding, I combine  the best of two worlds and bring a unique perspective to every project I undertake."
+    "description": "Hey! Ich bin Florian Elmhorst, Frontend Entwickler und Interaktions-Designer mit einer Leidenschaft für das Entwickeln ansprechender digitaler Systeme. Mit einem Auge für UI-Design und einem ausgeprägten technischen Versätndnis kombiniere ich das Beste aus zwei Welten und bringe eine einzigartige Perspektive in jedes Projekt."
   }
 }
