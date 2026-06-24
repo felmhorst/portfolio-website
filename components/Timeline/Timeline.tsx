@@ -12,17 +12,17 @@ const chapters: Record<string, LifeChapterProps[]> = {
                     href={"https://www.muuuh.de/"}
                     target={"_blank"}/>, Osnabrück
             </>,
-            description: "Momentan arbeite ich als Web Entwickler, während ich nebenbei eine Vielzahl an Bots betreue " +
-                "und weiterentwickle.",
+            description: "Momentan arbeite ich als Fullstack Developer und entwickle eine Vielzahl an Webseiten und " +
+                "Webapps.",
         },
         {
             start: "2024",
             end: "2025",
             title: <>
-                <Link
-                    label={"M.Sc. Computer Science (Conversion)"}
-                    href={"https://www.ucd.ie/courses/msc-computer-science-conversion"}
-                    target={"_blank"}/> in UCD, Dublin
+                M.Sc. Computer Science (Conversion) in <Link
+                    label={"UCD"}
+                    href={"https://www.ucd.ie/"}
+                    target={"_blank"}/>, Dublin
             </>,
             description: "Ich habe mich nach einer formalen Ausbildung für einen Master in Informatik bewegt. Neben " +
                 "verschiedenen Programmiersprachen habe ich auch Netzwerke, Cyber Sicherheit, Datenanalyse, " +
@@ -32,10 +32,10 @@ const chapters: Record<string, LifeChapterProps[]> = {
             start: "2024",
             end: "2024",
             title: <>
-                <Link
-                    label={"Prof.Cert. Mathematics for Data Analytics and Statistics"}
-                    href={"https://hub.ucd.ie/usis/!W_HU_MENU.P_PUBLISH?p_tag=PROG&MAJR=F140"}
-                    target={"_blank"}/> in UCD, Dublin
+                Prof.Cert. Mathematics for Data Analytics and Statistics in <Link
+                    label={"UCD"}
+                    href={"https://www.ucd.ie/"}
+                    target={"_blank"}/>, Dublin
             </>,
             description: "Als Vorbereitung für meinen Master habe ich meine Skills in Mathematik und Statistik verbessert."
         },
@@ -68,14 +68,24 @@ const chapters: Record<string, LifeChapterProps[]> = {
     en: [
         {
             start: "2026",
-            title: "Developer at MUUUH!, Osnabrück",
-            description: "Currently I am working as a web developer while also developing and supervising a " +
-                "range of bots.",
+            title: <>
+                Developer at <Link
+                label={"MUUUH!"}
+                href={"https://www.muuuh.de/"}
+                target={"_blank"}/>, Osnabrück
+            </>,
+            description: "Currently I am working as a fullstack developer and work on a number of websites and " +
+                "webapps.",
         },
         {
             start: "2024",
             end: "2025",
-            title: "M.Sc. Computer Science (Conversion) in UCD, Dublin",
+            title: <>
+                M.Sc. Computer Science (Conversion) at <Link
+                label={"UCD"}
+                href={"https://www.ucd.ie/"}
+                target={"_blank"}/>, Dublin
+            </>,
             description: "Looking to expand on my knowledge with a formal education, I moved to Ireland. Besides " +
                 "different programming languages I learned about networks, cyber security, data analytics, " +
                 "computer architecture and more."
@@ -83,13 +93,23 @@ const chapters: Record<string, LifeChapterProps[]> = {
         {
             start: "2024",
             end: "2024",
-            title: "Prof.Cert. Mathematics for Data Analytics and Statistics at UCD, Dublin",
+            title: <>
+                Prof.Cert. Mathematics for Data Analytics and Statistics at <Link
+                label={"UCD"}
+                href={"https://www.ucd.ie/"}
+                target={"_blank"}/>, Dublin
+            </>,
             description: "As a preparation for my masters, I brushed up on mathematics and statistics."
         },
         {
             start: "2021",
             end: "2024",
-            title: "Frontend Developer at ISCOPE, Osnabrück",
+            title: <>
+                Frontend Developer at <Link
+                label={"ISCOPE"}
+                href={"https://iscope.de/"}
+                target={"_blank"}/>, Osnabrück
+            </>,
             description: "I began working at ISCOPE while I was studying and worked in a variety of projects, " +
                 "ranging from mobile apps with augmented reality, over experimental projects with the Kinect, to " +
                 "highly interactive web apps."
@@ -97,7 +117,12 @@ const chapters: Record<string, LifeChapterProps[]> = {
         {
             start: "2019",
             end: "2023",
-            title: "B.A. Media & Interaction Design at University of Applied Sciences, Osnabrück",
+            title: <>
+                <Link
+                    label={"B.A. Media & Interaction Design"}
+                    href={"https://www.hs-osnabrueck.de/en/study/study-offerings/bachelor/media-interaction-design-ba/"}
+                    target={"_blank"}/> at University of Applied Sciences, Osnabrück
+            </>,
             description: "In my undergraduate degree, I learned conceptualizing, designing, and evaluating user " +
                 "interfaces and processes."
         }

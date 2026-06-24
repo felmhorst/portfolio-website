@@ -1,4 +1,10 @@
 {
+  "time": {
+    "since": "seit",
+    "from": "von",
+    "to": "bis",
+    "in": "in"
+  },
   "Nav": {
     "projects": "Projekte",
     "about": "Über mich"

@@ -2,7 +2,7 @@
   position: relative;
   transition: color 0.3s ease-out;
 }
-.link::after {
+.link::before, .link::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -13,6 +13,11 @@
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
+}
+.link::before {
+  background-color: var(--color-on-surface-2);
+  opacity: 0.2;
+  transform: scaleX(0.99);
 }
 .link:hover::after {
   transform: scaleX(1);

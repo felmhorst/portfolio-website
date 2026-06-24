@@ -1,4 +1,10 @@
 {
+  "time": {
+    "since": "since",
+    "from": "from",
+    "to": "to",
+    "in": "in"
+  },
   "Nav": {
     "projects": "Projects",
     "about": "About"

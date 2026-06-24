@@ -1,5 +1,7 @@
+
 import React from "react";
 import styles from "./LifeChapter.module.css";
+import {useTranslations} from "next-intl";
 
 export interface LifeChapterProps {
     start: string;
@@ -15,12 +17,13 @@ export const LifeChapter = (props: LifeChapterProps) => {
         title,
         description,
     } = props;
+    const t = useTranslations("time");
 
     const label = !end
-        ? `Since ${start}`
+        ? `${t("since")} ${start}`
         : start !== end
-            ? `From ${start} to ${end}`
-            : `In ${start}`;
+            ? `${t("from")} ${start} ${t("to")} ${end}`
+            : `${t("in")} ${start}`;
 
     return (
         <div className={styles.container}>
