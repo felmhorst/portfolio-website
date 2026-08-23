@@ -24,8 +24,8 @@ const chapters: Record<string, LifeChapterProps[]> = {
                     href={"https://www.ucd.ie/"}
                     target={"_blank"}/>, Dublin
             </>,
-            description: "Ich habe mich nach einer formalen Ausbildung für einen Master in Informatik bewegt. Neben " +
-                "verschiedenen Programmiersprachen habe ich auch Netzwerke, Cyber Sicherheit, Datenanalyse, " +
+            description: "Um mein Wissen zu erweitern, bin ich für den Master nach Informatik gezogen. Neben " +
+                "verschiedenen Programmiersprachen habe ich auch über Netzwerke, Cyber Sicherheit, Datenanalyse, " +
                 "Computerarchitektur und mehr gelernt.",
         },
         {

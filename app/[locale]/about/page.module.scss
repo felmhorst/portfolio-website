@@ -1,0 +1,40 @@
+@use '../../../styles/variables' as *;
+
+$padding: 16px;
+$column-gap: 64px;
+$column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
+
+
+.title {
+  font-family: var(--font-playfair-display);
+  font-size: 3em;
+  line-height: 1em;
+  color: var(--color-primary);
+  // optical alignment of the edge of the letter & the median
+  transform: translate(-.07em, -0.32em);
+}
+
+.title_line {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: $breakpoint-lg) {
+  $padding: 24px;
+  $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
+
+  .title {
+    position: fixed;
+    width: $column-width;
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  $padding: 64px;
+  $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
+
+  .title {
+    font-size: 4em;
+    width: $column-width;
+  }
+}

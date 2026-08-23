@@ -47,4 +47,20 @@
   color: var(--color-on-surface-2);
 }
 
+@media (min-width: 768px) {
+  .container {
+    margin: 60px 0;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    margin: 80px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    margin: 100px 0;
+  }
+}
+
 /*# sourceMappingURL=LifeChapter.module.css.map */

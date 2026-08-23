@@ -1,3 +1,6 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 .container {
   width: 100%;
   max-width: 600px;
@@ -47,4 +50,22 @@
   font-size: 1em;
   font-weight: 300;
   color: var(--color-on-surface-2);
+}
+
+@include breakpoint-min(md) {
+  .container {
+    margin: 60px 0;
+  }
+}
+
+@include breakpoint-min(lg) {
+  .container {
+    margin: 80px 0;
+  }
+}
+
+@include breakpoint-min(xl) {
+  .container {
+    margin: 100px 0;
+  }
 }

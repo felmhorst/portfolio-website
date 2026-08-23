@@ -7,13 +7,29 @@
   },
   "Nav": {
     "projects": "Projekte",
-    "about": "Über mich"
+    "about": "Über mich",
+    "ariaLabel": "Hauptnavigation",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
   },
   "Footer": {
     "name": "Florian Elmhorst"
   },
   "AboutPage": {
-    "title": "Interaktions-Designer &<br/>Web Entwickler",
+    "title": "Über mich",
+    "heading": {
+      "line1": "Interaktions-",
+      "line2": "Designer &",
+      "line3": "Web Entwickler"
+    },
     "description": "Hey! Ich bin Florian Elmhorst, Frontend Entwickler und Interaktions-Designer mit einer Leidenschaft für das Entwickeln ansprechender digitaler Systeme. Mit einem Auge für UI-Design und einem ausgeprägten technischen Versätndnis kombiniere ich das Beste aus zwei Welten und bringe eine einzigartige Perspektive in jedes Projekt."
+  },
+  "WorkPage": {
+    "title": "Projekte"
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "heading": "Seite nicht gefunden",
+    "description": "Diese Seite existiert nicht."
   }
 }

@@ -7,13 +7,29 @@
   },
   "Nav": {
     "projects": "Projects",
-    "about": "About"
+    "about": "About",
+    "ariaLabel": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "Footer": {
     "name": "Florian Elmhorst"
   },
   "AboutPage": {
-    "title": "interaction designer &<br/>web developer",
+    "title": "About",
+    "heading": {
+      "line1": "interaction",
+      "line2": "designer &",
+      "line3": "web developer"
+    },
     "description": "Hey! I'm Florian Elmhorst, an interaction designer and frontend  developer with a passion for creating engaging digital experiences. With an eye for visual design and a good technical understanding, I combine  the best of two worlds and bring a unique perspective to every project I undertake."
+  },
+  "WorkPage": {
+    "title": "Projects"
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "heading": "Page not found",
+    "description": "The page you are looking for does not exist."
   }
 }

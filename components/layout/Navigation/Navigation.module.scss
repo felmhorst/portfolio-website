@@ -1,0 +1,69 @@
+@use '../../../styles/mixins' as *;
+
+.nav {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  padding: var(--padding-outer-vertical) var(--padding-outer-horizontal);
+  background-color: var(--color-surface);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease, visibility 0s linear .3s;
+  user-select: none;
+
+  &__open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 2em;
+}
+
+.li {
+  display: inline;
+  text-decoration: none;
+}
+
+.link {
+  border-radius: 1px;
+  opacity: .5;
+  transition: opacity .2s;
+
+  &:not(&[aria-current=page]):hover {
+    opacity: .7;
+  }
+
+  &[aria-current=page] {
+    opacity: 1;
+  }
+}
+
+@include breakpoint-min(md) {
+  .nav {
+    position: static;
+    inset: auto;
+    padding: 0;
+    background-color: transparent;
+    visibility: visible;
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@include breakpoint-min(md) {
+  .ul {
+    flex-direction: row;
+    height: auto;
+    gap: 1em;
+  }
+}

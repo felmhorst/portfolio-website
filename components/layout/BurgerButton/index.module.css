@@ -1,0 +1,74 @@
+.burgerButton {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-radius-sm);
+  position: relative;
+  z-index: 100;
+}
+.burgerButton_wrapper {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  width: 32px;
+  height: 22px;
+  position: relative;
+}
+.burgerButton_inner, .burgerButton_inner::before, .burgerButton_inner::after, .burgerButton_outer, .burgerButton_outer::before, .burgerButton_outer::after {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+}
+.burgerButton_inner::before, .burgerButton_inner::after, .burgerButton_outer::before, .burgerButton_outer::after {
+  content: "";
+  left: 0;
+  background-color: var(--color-on-surface);
+  transition: 0.2s;
+}
+.burgerButton_outer {
+  position: static;
+}
+.burgerButton_outer::before, .burgerButton_outer::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.burgerButton_outer::before {
+  top: 0;
+}
+.burgerButton_outer::after {
+  bottom: 0;
+}
+.burgerButton[aria-expanded=true] .burgerButton_inner::before {
+  transform: rotate(45deg);
+}
+.burgerButton[aria-expanded=true] .burgerButton_inner::after {
+  transform: rotate(-45deg);
+}
+.burgerButton[aria-expanded=true] .burgerButton_outer::before, .burgerButton[aria-expanded=true] .burgerButton_outer::after {
+  width: 0;
+}
+
+@media (min-width: 768px) {
+  .burgerButton {
+    display: none;
+  }
+}
+@media (pointer: fine) {
+  .burgerButton:hover .burgerButton_outer::before {
+    top: -4px;
+  }
+  .burgerButton:hover .burgerButton_outer::after {
+    bottom: -4px;
+  }
+  .burgerButton[aria-expanded=true]:hover .burgerButton_inner::before {
+    transform: translateY(-50%) rotate(45deg) scaleX(1.2);
+  }
+  .burgerButton[aria-expanded=true]:hover .burgerButton_inner::after {
+    transform: translateY(-50%) rotate(-45deg) scaleX(1.2);
+  }
+}
+
+/*# sourceMappingURL=index.module.css.map */

@@ -1,6 +1,7 @@
 .link {
   position: relative;
   transition: color 0.3s ease-out;
+  border-radius: var(--border-radius-sm);
 
   &::before, &::after {
     content: '';
@@ -22,12 +23,15 @@
   &:hover::after {
     transform: scaleX(1);
   }
+  &:focus-visible::before {
+    opacity: 0;
+  }
 
   &__color {
     &-neutral {
       color: inherit;
 
-      &:hover {
+      &:hover, &:focus-visible {
         color: var(--color-primary);
       }
     }

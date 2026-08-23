@@ -8,7 +8,7 @@ $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
   width: 100%;
   max-width: 800px;
   padding: var(--padding-inner-vertical) var(--padding-outer-horizontal);
-  margin: 0 auto;
+  margin: auto;
 }
 
 .main {
@@ -18,7 +18,7 @@ $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
 }
 
 .title {
-  font-family: var(--font-playfair-display);
+  font-family: var(--font-playfair-display), sans-serif;
   font-size: 3em;
   line-height: 1em;
   color: var(--color-primary);
