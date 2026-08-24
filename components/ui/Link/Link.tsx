@@ -2,7 +2,7 @@ import React from "react";
 import NextLink, {LinkProps as NextLinkProps} from "next/link";
 import styles from "./Link.module.css";
 
-export interface LinkProps extends NextLinkProps  {
+export interface LinkProps extends NextLinkProps, Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof NextLinkProps> {
     label: string;
     color?: "neutral" | "primary";
 }
