@@ -14,7 +14,7 @@
   font-weight: 400;
   color: var(--color-on-surface-3);
 
-  &[data-active="true"]::before {
+  /*&[data-active="true"]::before {
     width: 8px;
     height: 8px;
     background-color: var(--color-primary);
@@ -24,7 +24,7 @@
     left: -16px;
     transform: translateY(-50%);
     content: "";
-  }
+  }*/
 }
 
 .dash {

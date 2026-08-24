@@ -10,17 +10,17 @@
   font-size: 0.8em;
   font-weight: 400;
   color: var(--color-on-surface-3);
-}
-.dates[data-active=true]::before {
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: -16px;
-  transform: translateY(-50%);
-  content: "";
+  /*&[data-active="true"]::before {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    transform: translateY(-50%);
+    content: "";
+  }*/
 }
 
 .dash {

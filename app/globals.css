@@ -23,7 +23,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --color-surface: #ffffff;
-    --color-on-surface: #00000;
+    --color-on-surface: #000000;
     --color-on-surface-2: #353535;
     --color-on-surface-3: #9E9E9E;
   }

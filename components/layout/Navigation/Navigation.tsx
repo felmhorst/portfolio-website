@@ -46,7 +46,7 @@ export const NavigationItem = ({
     onNavigate: () => void;
 }) => {
     const pathname = usePathname();
-    const isActive = href === pathname;
+    const isActive = pathname.includes(href.toString());
 
     return (
         <li className={styles.li}>

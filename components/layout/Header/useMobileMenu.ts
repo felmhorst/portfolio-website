@@ -12,8 +12,6 @@ export const useMobileMenu = () => {
 
     useEffect(() => {
         if (!isOpen) return;
-
-        navRef.current?.focus();
         document.body.style.overflow = "hidden";
 
         const closeOnEscape = (event: KeyboardEvent) => {
@@ -24,7 +22,6 @@ export const useMobileMenu = () => {
         return () => {
             document.body.style.overflow = "";
             document.removeEventListener("keydown", closeOnEscape);
-            buttonRef.current?.focus();
         };
     }, [isOpen]);
 
