@@ -3,17 +3,58 @@
 
 .header {
   @include fixed-section;
-  z-index: 1000;
+  padding-top: calc(env(safe-area-inset-top, 0px) + var(--padding-outer-vertical));
+  z-index: 100;
   top: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+}
+
+.menu {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  padding:
+    calc(env(safe-area-inset-top, 0px) + var(--padding-outer-vertical))
+    calc(env(safe-area-inset-right, 0px) + var(--padding-outer-horizontal))
+    calc(env(safe-area-inset-bottom, 0px) + var(--padding-outer-vertical))
+    calc(env(safe-area-inset-left, 0px) + var(--padding-outer-horizontal));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  visibility: hidden;
+  pointer-events: none;
+  // matches the venetian blinds' full close duration, see VenetianBlinds/index.tsx
+  transition: visibility 0s linear .6s;
+
+  &__open {
+    visibility: visible;
+    pointer-events: auto;
+    transition: none;
+  }
 }
 
 @media (min-width: $breakpoint-md) {
   .header {
     font-size: 16px;
+  }
+  .menu {
+    position: static;
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    visibility: visible;
+    pointer-events: auto;
+    transition: none;
   }
 }

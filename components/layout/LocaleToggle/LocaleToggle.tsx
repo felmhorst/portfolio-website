@@ -4,25 +4,24 @@ import React from "react";
 import styles from "./LocaleToggle.module.css";
 import {useLocale} from "next-intl";
 import {Link, usePathname} from "@/i18n/navigation";
-import {AnimateChildren} from "@/components/animations/AnimateChildren";
-import {Reveal} from "@/components/animations/Reveal";
-import {Direction} from "@/utility/types";
 
-export const LocaleToggle = () => {
+export const LocaleToggle = ({
+    isOpen = false,
+}: {
+    isOpen?: boolean;
+}) => {
 
     return (
-        <AnimateChildren delay={1.6}>
-            <div className={styles.container}>
-                <ul className={styles.ul}>
-                    <LocaleButton
-                        label={"DE"}
-                        locale={"de"}/>
-                    <LocaleButton
-                        label={"EN"}
-                        locale={"en"}/>
-                </ul>
-            </div>
-        </AnimateChildren>
+        <div className={`${styles.container} ${isOpen ? styles.container__open : ""}`}>
+            <ul className={styles.ul}>
+                <LocaleButton
+                    label={"DE"}
+                    locale={"de"}/>
+                <LocaleButton
+                    label={"EN"}
+                    locale={"en"}/>
+            </ul>
+        </div>
     )
 };
 
@@ -41,6 +40,7 @@ export const LocaleButton = ({
         <li className={styles.li}>
             <Link
                 href={pathname}
+                hrefLang={locale}
                 locale={locale}
                 aria-current={isActive ? "page" : undefined}
                 className={`${styles.button} ${isActive ? styles.button__active : ""}`}>

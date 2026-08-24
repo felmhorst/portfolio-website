@@ -1,6 +1,7 @@
-import {LifeChapter, LifeChapterProps} from "@/components/LifeChapter/LifeChapter";
+import {LifeChapter, LifeChapterProps} from "@/components/ui/LifeChapter/LifeChapter";
 import {useLocale} from "next-intl";
 import {Link} from "@/components/ui/Link/Link";
+import styles from "./Timeline.module.css";
 
 const chapters: Record<string, LifeChapterProps[]> = {
     de: [
@@ -133,7 +134,7 @@ export const Timeline = () => {
     const locale = useLocale();
 
     return (
-        <div>
+        <div className={styles.container}>
             {chapters[locale].map((chapter, index) => (
                 <LifeChapter
                     key={index}

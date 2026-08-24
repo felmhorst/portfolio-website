@@ -1,6 +1,29 @@
+@use '../../../styles/mixins' as *;
+
 .container {
   display: block;
+  position: relative;
+  z-index: 1;
   user-select: none;
+
+  opacity: 0;
+  transform: translateY(1.5em);
+  transition: opacity .3s ease, transform .3s ease;
+
+  &__open {
+    opacity: 1;
+    transform: translateY(0);
+    // after the nav links, see Navigation.module.scss / VenetianBlinds/index.tsx
+    transition-delay: .6s;
+  }
+}
+
+@include breakpoint-min(md) {
+  .container {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .ul {

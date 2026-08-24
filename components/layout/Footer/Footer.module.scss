@@ -2,6 +2,7 @@
 @use '../../../styles/mixins' as *;
 
 .footer {
+  z-index: 100;
   display: flex;
   flex-direction: row;
   gap: 24px;
@@ -53,6 +54,7 @@
 @media (min-width: $breakpoint-lg) {
   .footer {
     @include fixed-section;
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--padding-outer-vertical));
     bottom: 0;
   }
 }

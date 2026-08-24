@@ -1,21 +1,17 @@
 .container {
-  z-index: 400;
-  position: fixed;
-  pointer-events: none;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
 }
-
-.cursor_container {
+.container, .container_container {
   position: fixed;
+  z-index: 200;
+  pointer-events: none;
   top: 0;
   left: 0;
+}
+.container_container {
   width: 0;
   height: 0;
-  z-index: 400;
-  pointer-events: none;
 }
 
 .cursor_dot {
@@ -25,7 +21,6 @@
   border-radius: 50%;
   background-color: var(--color-primary);
 }
-
 .cursor_outline {
   transform: translate(-50%, -50%);
   width: 48px;
@@ -46,7 +41,7 @@
 }
 
 @media (pointer: coarse) {
-  .CursorWrapper {
+  .container {
     display: none;
   }
 }

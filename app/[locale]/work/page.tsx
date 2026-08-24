@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
-import {Column, ColumnLayout} from "@/components/ColumnLayout/ColumnLayout";
-import {ProjectPreview} from "@/components/ProjectPreview/ProjectPreview";
+import {Column, ColumnLayout} from "@/components/layout/ColumnLayout/ColumnLayout";
+import {ProjectPreview} from "@/components/ui/ProjectPreview/ProjectPreview";
 
 
 export default function Work() {

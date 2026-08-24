@@ -1,19 +1,16 @@
 .nav {
   display: block;
-  position: fixed;
-  z-index: 10;
-  inset: 0;
-  padding: var(--padding-outer-vertical) var(--padding-outer-horizontal);
-  background-color: var(--color-surface);
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  position: relative;
+  z-index: 1;
   user-select: none;
+  opacity: 0;
+  transform: translateY(1.5em);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .nav__open {
-  visibility: visible;
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transform: translateY(0);
+  transition-delay: 0.45s;
 }
 
 .ul {
@@ -21,8 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
   gap: 2em;
 }
 
@@ -35,6 +30,7 @@
   border-radius: 1px;
   opacity: 0.5;
   transition: opacity 0.2s;
+  font-size: 1.4em;
 }
 .link:not(.link[aria-current=page]):hover {
   opacity: 0.7;
@@ -46,19 +42,19 @@
 @media (min-width: 768px) {
   .nav {
     position: static;
-    inset: auto;
-    padding: 0;
-    background-color: transparent;
-    visibility: visible;
     opacity: 1;
+    transform: none;
     transition: none;
   }
-}
-@media (min-width: 768px) {
+
   .ul {
     flex-direction: row;
     height: auto;
     gap: 1em;
+  }
+
+  .link {
+    font-size: 1em;
   }
 }
 

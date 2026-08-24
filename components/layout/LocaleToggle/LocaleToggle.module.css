@@ -1,8 +1,25 @@
 .container {
   display: block;
+  position: relative;
+  z-index: 1;
   user-select: none;
+  opacity: 0;
+  transform: translateY(1.5em);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.container__open {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
 }
 
+@media (min-width: 768px) {
+  .container {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 .ul {
   list-style: none;
   display: flex;

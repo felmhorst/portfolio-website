@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
-import {Timeline} from "@/components/Timeline/Timeline";
-import {Column, ColumnLayout} from "@/components/ColumnLayout/ColumnLayout";
+import {Timeline} from "@/components/ui/Timeline/Timeline";
+import {Column, ColumnLayout} from "@/components/layout/ColumnLayout/ColumnLayout";
 import {useTranslations} from "next-intl";
 import {AnimateChildren} from "@/components/animations/AnimateChildren";
 import {Reveal} from "@/components/animations/Reveal";
@@ -13,23 +13,9 @@ export default function About() {
         <ColumnLayout>
             <Column>
                 <h1 className={styles.title}>
-                    <AnimateChildren staggerDuration={.14}>
-                        <Reveal
-                            asChild={true}
-                            className={styles.title_line}>
-                            {t("heading.line1")}
-                        </Reveal>
-                        <Reveal
-                            asChild={true}
-                            className={styles.title_line}>
-                            {t("heading.line2")}
-                        </Reveal>
-                        <Reveal
-                            asChild={true}
-                            className={styles.title_line}>
-                            {t("heading.line3")}
-                        </Reveal>
-                    </AnimateChildren>
+                    {t("heading.line1")}<br/>
+                    {t("heading.line2")}<br/>
+                    {t("heading.line3")}
                 </h1>
             </Column>
             <Column>

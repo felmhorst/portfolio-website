@@ -26,10 +26,12 @@ export const LifeChapter = (props: LifeChapterProps) => {
             : `${t("in")} ${start}`;
 
     return (
-        <div className={styles.container}>
+        <div
+            className={styles.container}>
             <p
                 className={styles.dates}
-                aria-label={label}>
+                aria-label={label}
+                data-active={!end}>
                 {!end && <span>since </span>}
                 <time dateTime={start}>{start}</time>
                 {!!end && start !== end && <>

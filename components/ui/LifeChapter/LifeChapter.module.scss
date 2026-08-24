@@ -1,5 +1,5 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .container {
   width: 100%;
@@ -8,10 +8,23 @@
 }
 
 .dates {
+  position: relative;
   margin: 0;
   font-size: .8em;
   font-weight: 400;
   color: var(--color-on-surface-3);
+
+  &[data-active="true"]::before {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    transform: translateY(-50%);
+    content: "";
+  }
 }
 
 .dash {

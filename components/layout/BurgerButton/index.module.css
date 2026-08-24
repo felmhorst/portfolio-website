@@ -6,7 +6,7 @@
   height: 32px;
   border-radius: var(--border-radius-sm);
   position: relative;
-  z-index: 100;
+  z-index: 110;
 }
 .burgerButton_wrapper {
   display: flex;

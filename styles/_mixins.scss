@@ -9,5 +9,9 @@
 @mixin fixed-section {
   position: fixed;
   left: 0;
-  padding: var(--padding-outer-vertical) var(--padding-outer-horizontal);
+  padding:
+    var(--padding-outer-vertical)
+    calc(env(safe-area-inset-right, 0px) + var(--padding-outer-horizontal))
+    var(--padding-outer-vertical)
+    calc(env(safe-area-inset-left, 0px) + var(--padding-outer-horizontal));
 }
