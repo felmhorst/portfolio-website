@@ -1,22 +1,14 @@
 .page {
+  padding: var(--padding-inner-top) var(--padding-right) var(--padding-inner-bottom) var(--padding-left);
   width: 100%;
   max-width: 800px;
-  padding: var(--padding-inner-vertical) var(--padding-outer-horizontal);
-  margin: auto;
+  margin: 0 auto;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   gap: 64px;
-}
-
-.title {
-  font-family: var(--font-playfair-display), sans-serif;
-  font-size: 3em;
-  line-height: 1em;
-  color: var(--color-primary);
-  transform: translate(-0.07em, -0.32em);
 }
 
 @media (min-width: 992px) {
@@ -32,8 +24,8 @@
 
   .column {
     position: relative;
-    flex: 1 1 calc((100% - (24px * 2) - 64px) / 2);
-    width: calc((100% - (24px * 2) - 64px) / 2);
+    flex: 1 1 calc((100% - calc(var(--padding-left) + var(--padding-right)) - 64px) / 2);
+    width: calc((100% - calc(var(--padding-left) + var(--padding-right)) - 64px) / 2);
   }
 }
 

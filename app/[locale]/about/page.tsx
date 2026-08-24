@@ -2,8 +2,6 @@ import styles from "./page.module.css";
 import {Timeline} from "@/components/ui/Timeline/Timeline";
 import {Column, ColumnLayout} from "@/components/layout/ColumnLayout/ColumnLayout";
 import {useTranslations} from "next-intl";
-import {AnimateChildren} from "@/components/animations/AnimateChildren";
-import {Reveal} from "@/components/animations/Reveal";
 import {Slide} from "@/components/animations/Slide";
 
 export default function About() {

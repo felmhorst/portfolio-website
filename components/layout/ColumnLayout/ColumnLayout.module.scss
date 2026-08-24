@@ -1,14 +1,13 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
-$padding: 16px;
 $column-gap: 64px;
-$column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
+$padding-x: calc(var(--padding-left) + var(--padding-right));
+$column-width: calc((100% - #{$padding-x} - #{$column-gap}) / 2);
 
 .page {
-  width: 100%;
-  max-width: 800px;
-  padding: var(--padding-inner-vertical) var(--padding-outer-horizontal);
-  margin: auto;
+  @include inner-padding;
+  @include max-width;
 }
 
 .main {
@@ -17,19 +16,7 @@ $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
   gap: $column-gap;
 }
 
-.title {
-  font-family: var(--font-playfair-display), sans-serif;
-  font-size: 3em;
-  line-height: 1em;
-  color: var(--color-primary);
-  // optical alignment of the edge of the letter & the median
-  transform: translate(-.07em, -0.32em);
-}
-
-@media (min-width: $breakpoint-lg) {
-  $padding: 24px;
-  $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
-
+@include breakpoint-min(lg) {
   .page {
     max-width: unset;
   }

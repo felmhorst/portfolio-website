@@ -1,12 +1,12 @@
 @use '../../../styles/variables' as *;
 
-$padding: 16px;
 $column-gap: 64px;
-$column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
+$padding-x: calc(var(--padding-left) + var(--padding-right));
+$column-width: calc((100% - #{$padding-x} - #{$column-gap}) / 2);
 
 
 .title {
-  font-family: var(--font-playfair-display);
+  font-family: var(--font-playfair-display), serif;
   font-size: 3em;
   line-height: 1em;
   color: var(--color-primary);
@@ -14,15 +14,7 @@ $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
   transform: translate(-.07em, -0.32em);
 }
 
-.title_line {
-  display: block;
-  width: 100%;
-}
-
 @media (min-width: $breakpoint-lg) {
-  $padding: 24px;
-  $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
-
   .title {
     position: fixed;
     width: $column-width;
@@ -30,11 +22,7 @@ $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
 }
 
 @media (min-width: $breakpoint-xxl) {
-  $padding: 64px;
-  $column-width: calc((100% - (#{$padding} * 2) - #{$column-gap}) / 2);
-
   .title {
     font-size: 4em;
-    width: $column-width;
   }
 }

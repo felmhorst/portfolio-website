@@ -2,11 +2,14 @@
 @use '../../../styles/mixins' as *;
 
 .header {
-  @include fixed-section;
-  padding-top: calc(env(safe-area-inset-top, 0px) + var(--padding-outer-vertical));
-  z-index: 100;
+  @include outer-padding;
+  @include max-width;
+  position: fixed;
+  left: 0;
   top: 0;
-  width: 100%;
+  max-width: unset;
+  padding-bottom: var(--padding-outer-y);
+  z-index: 100;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -14,15 +17,11 @@
 }
 
 .menu {
+  @include outer-padding;
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100vh;
-  padding:
-    calc(env(safe-area-inset-top, 0px) + var(--padding-outer-vertical))
-    calc(env(safe-area-inset-right, 0px) + var(--padding-outer-horizontal))
-    calc(env(safe-area-inset-bottom, 0px) + var(--padding-outer-vertical))
-    calc(env(safe-area-inset-left, 0px) + var(--padding-outer-horizontal));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +39,7 @@
   }
 }
 
-@media (min-width: $breakpoint-md) {
+@include breakpoint-min(md) {
   .header {
     font-size: 16px;
   }
@@ -56,5 +55,11 @@
     visibility: visible;
     pointer-events: auto;
     transition: none;
+  }
+}
+
+@include breakpoint-min(lg) {
+  .header {
+    max-width: unset;
   }
 }

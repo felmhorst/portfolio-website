@@ -6,12 +6,24 @@
   }
 }
 
-@mixin fixed-section {
-  position: fixed;
-  left: 0;
+@mixin outer-padding {
   padding:
-    var(--padding-outer-vertical)
-    calc(env(safe-area-inset-right, 0px) + var(--padding-outer-horizontal))
-    var(--padding-outer-vertical)
-    calc(env(safe-area-inset-left, 0px) + var(--padding-outer-horizontal));
+    var(--padding-top)
+    var(--padding-right)
+    var(--padding-bottom)
+    var(--padding-left);
+}
+
+@mixin inner-padding {
+  padding:
+    var(--padding-inner-top)
+    var(--padding-right)
+    var(--padding-inner-bottom)
+    var(--padding-left);
+}
+
+@mixin max-width {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }

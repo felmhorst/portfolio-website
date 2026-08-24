@@ -2,6 +2,7 @@
 @use '../styles/mixins' as *;
 
 :root {
+  // colors
   --color-primary: #C33A3A;
   --color-on-primary: #FFFFFF;
   --color-surface: #1a1a20;
@@ -9,13 +10,23 @@
   --color-on-surface-2: #F5F5F5;
   --color-on-surface-3: #9F9F9F;
 
+  // fonts
   --font-roboto: "Roboto", sans-serif;
   --font-playfair-display: "Playfair Display", serif;
 
-  --padding-outer-horizontal: 16px;
-  --padding-outer-vertical: 16px;
-  --padding-inner-vertical: 64px;
+  // spacing
+  --padding-outer-x: 16px;
+  --padding-outer-y: 16px;
+  --padding-inner-y: 64px;
 
+  --padding-left: calc(var(--padding-outer-x) + env(safe-area-inset-left, 0px));
+  --padding-right: calc(var(--padding-outer-x) + env(safe-area-inset-right, 0px));
+  --padding-top: calc(var(--padding-outer-y) + env(safe-area-inset-top, 0px));
+  --padding-bottom: calc(var(--padding-outer-y) + env(safe-area-inset-bottom, 0px));
+  --padding-inner-top: calc(var(--padding-inner-y) + env(safe-area-inset-top, 0px));
+  --padding-inner-bottom: calc(var(--padding-inner-y) + env(safe-area-inset-bottom, 0px));
+
+  // border radius
   --border-radius-sm: 1px;
   --border-radius-md: 8px;
 }
@@ -40,7 +51,7 @@ body {
 body {
   background-color: var(--color-surface);
   color: var(--color-on-surface);
-  font-family: var(--font-roboto);
+  font-family: var(--font-roboto), sans-serif;
   font-size: 15px;
   line-height: 1.3em;
   -webkit-font-smoothing: antialiased;
@@ -81,9 +92,9 @@ a {
 
 @media (min-width: $breakpoint-sm) {
   :root {
-    --padding-outer-horizontal: 24px;
-    --padding-outer-vertical: 24px;
-    --padding-inner-vertical: 80px;
+    --padding-outer-x: 24px;
+    --padding-outer-y: 24px;
+    --padding-inner-y: 80px;
   }
 
   body {
@@ -93,9 +104,9 @@ a {
 
 @include breakpoint-min(md) {
   :root {
-    --padding-outer-horizontal: 32px;
-    --padding-outer-vertical: 24px;
-    --padding-inner-vertical: 96px;
+    --padding-outer-x: 32px;
+    --padding-outer-y: 24px;
+    --padding-inner-y: 96px;
   }
   body {
     font-size: 18px;
@@ -104,9 +115,9 @@ a {
 
 @include breakpoint-min(lg) {
   :root {
-    --padding-outer-horizontal: 32px;
-    --padding-outer-vertical: 24px;
-    --padding-inner-vertical: 96px;
+    --padding-outer-x: 32px;
+    --padding-outer-y: 24px;
+    --padding-inner-y: 96px;
   }
   body {
     font-size: 20px;
@@ -115,9 +126,9 @@ a {
 
 @include breakpoint-min(xl) {
   :root {
-    --padding-outer-horizontal: 56px;
-    --padding-outer-vertical: 40px;
-    --padding-inner-vertical: 140px;
+    --padding-outer-x: 56px;
+    --padding-outer-y: 40px;
+    --padding-inner-y: 140px;
   }
   body {
     font-size: 22px;
@@ -126,9 +137,9 @@ a {
 
 @include breakpoint-min(xxl) {
   :root {
-    --padding-outer-horizontal: 64px;
-    --padding-outer-vertical: 48px;
-    --padding-inner-vertical: 184px;
+    --padding-outer-x: 64px;
+    --padding-outer-y: 48px;
+    --padding-inner-y: 184px;
   }
   body {
     font-size: 24px;
@@ -137,6 +148,6 @@ a {
 
 @include breakpoint-min(3xl) {
   :root {
-    --padding-outer-horizontal: 8vw;
+    --padding-outer-x: 8vw;
   }
 }

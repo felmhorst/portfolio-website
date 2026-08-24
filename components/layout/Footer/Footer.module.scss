@@ -2,15 +2,15 @@
 @use '../../../styles/mixins' as *;
 
 .footer {
+  @include outer-padding;
+  @include max-width;
+  padding-top: var(--padding-outer-y);
   z-index: 100;
   display: flex;
   flex-direction: row;
   gap: 24px;
   justify-content: flex-start;
   align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--padding-outer-vertical) var(--padding-outer-horizontal);
 }
 
 .logo {
@@ -39,22 +39,18 @@
   }
 }
 
-//.social_link {
-//  & svg {
-//    color: red;
-//  }
-//}
-
-@media (min-width: $breakpoint-md) {
+@include breakpoint-min(md) {
   .footer {
     font-size: 16px;
   }
 }
 
-@media (min-width: $breakpoint-lg) {
+@include breakpoint-min(lg) {
   .footer {
-    @include fixed-section;
-    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--padding-outer-vertical));
+    position: fixed;
+    left: 0;
+    right: unset;
+    width: fit-content;
     bottom: 0;
   }
 }

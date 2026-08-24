@@ -1,26 +1,20 @@
 .title {
-  font-family: var(--font-playfair-display);
+  font-family: var(--font-playfair-display), serif;
   font-size: 3em;
   line-height: 1em;
   color: var(--color-primary);
   transform: translate(-0.07em, -0.32em);
 }
 
-.title_line {
-  display: block;
-  width: 100%;
-}
-
 @media (min-width: 992px) {
   .title {
     position: fixed;
-    width: calc((100% - 24px * 2 - 64px) / 2);
+    width: calc((100% - calc(var(--padding-left) + var(--padding-right)) - 64px) / 2);
   }
 }
 @media (min-width: 1400px) {
   .title {
     font-size: 4em;
-    width: calc((100% - 64px * 2 - 64px) / 2);
   }
 }
 
